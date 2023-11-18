@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <img src="/image/logo.png"  />
+        <div class="school-name">
+            <h1>ĐẠI HỌC QUỐC GIA TP.HCM</h1>
+            <h1>TRƯỜNG ĐẠI HỌC BÁCH KHOA</h1>
+        </div>
+        <div class="student-info">
+            <p>Họ và tên: Nguyễn Văn A - xxxx</p>
+            <p>Khoa Khoa học và Kỹ thuật Máy tính</p>
+        </div>
+    </div>
+
+
+    <div class="information">
+        <div class="pages-left" style="background-color: #F4D0D0;">
+            <p>Số trang còn lại của bạn là yy</p>
+        </div>
+        <div class="additional-pages" style="background-color: #98ED8A;">
+            <p>Bạn sẽ nhận thêm 30 trang miễn phí</p>
+            <p> sau 29 ngày 15 giờ 20 phút 15 giây</p>
+        </div>
+    </div>
+
+    <!-- Main navigation menu -->
+    <nav class="navigation">
+        <ul>
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">MUA TRANG IN</a></li>
+            <li><a href="#">THÔNG TIN SINH VIÊN</a></li>
+            <li><a href="#">TRỢ GIÚP VÀ PHẢN HỒI</a></li>
+            <li><a href="#">PRINT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Submenu for PRINT, shown in a new row -->
+    <div class="print-submenu">
+        <ul>
+            <li><a href="#">Upload</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#" class="active">Printer</a></li>
+        </ul>
+    </div>
+    <!--  SETTING BOX -->
+    <!--  STEP 1 -->
+    <div id="step1" class="settings-box">
+        <form id="printingForm" onsubmit="return validateForm()">
+            <fieldset class="margin-box">
+                <legend>CHỌN MÁY IN</legend>
+                <div class="row">
+                    <div class="column">
+                        <label for="building">Chọn hoặc nhập tòa nhà:</label>
+                        <select id="building" onchange="updateFloorOptions()">
+                            <option value="h1">H1</option>
+                            <option value="h2">H2</option>
+                            <option value="h3">H3</option>
+                            <option value="h6">H6</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label for="floor">LẦU</label>
+                        <select id="floor" value="1">
+                            <!-- Tùy chọn sẽ được cập nhật bằng JavaScript -->
+                        </select>
+                    </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="right-margin">ID MÁY IN</label>
+                        <input type="text" id="printer-id" placeholder="Nhập ID máy in">
+                        <span id="id-error" style="color: red;"></span>
+                    </div>
+                </div>
+            </fieldset>
+    
+            <!-- preview  menu -->
+            <fieldset class="preview-box">
+                <legend>HƯỚNG DẪN CHỌN MÁY IN</legend>
+                <p>-Tòa nhà: chọn tòa nhà nơi có máy in bạn muốn in ở đó</p>
+                <p>-Lầu: chọn lầu nơi có máy in còn hoạt động</p>
+                <p>-ID: chọn ID máy in còn hoạt động</p>
+            </fieldset>
+
+            <div class="actions">
+                <button type="button"><i class="fas fa-arrow-right"></i> Next</button>
+                <button type="button"><i class="fas fa-times"></i> Cancel</button>
+                <button type="button"><i class="fas fa-question-circle"></i> Help</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <div id="step2" class="settings-box2">
+            <div class="settings-container">
+                <div>Bạn đã in thành công</div>    
+                <div class="actions2">
+                    <button id="backButton"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button id="OK"><i class="fas fa-check"></i> OK</button>
+                    <button id="Help"><i class="fas fa-question-circle"></i> Help</button>
+                </div>
+            </div>
+        </div>
+        <script src="run.js"></script>
+        <script>
+            function updateFloorOptions() {
+                // Lấy giá trị của tòa nhà
+                var building = document.getElementById("building").value;
+                // Lấy thẻ select của lầu
+                var floorSelect = document.getElementById("floor");
+                // Xóa các tùy chọn cũ
+                floorSelect.innerHTML = "";
+    
+                // Thêm các tùy chọn mới tùy thuộc vào tòa nhà được chọn
+                var maxFloors = 6; // Giá trị mặc định cho H1
+                if (building === "h2") {
+                    maxFloors = 7;
+                } else if (building === "h3" || building === "h6") {
+                    maxFloors = 8;
+                }
+    
+                // Tạo các tùy chọn từ 1 đến maxFloors
+                for (var i = 1; i <= maxFloors; i++) {
+                    var option = document.createElement("option");
+                    option.value = i;
+                    option.text = i;
+                    floorSelect.add(option);
+                }
+            }
+    
+            // Gọi hàm để cập nhật tùy chọn lầu khi trang được tải
+            updateFloorOptions();
+        </script>
+        <script>
+            // Existing JavaScript code
+    
+            // Additional JavaScript for validation
+            const validateForm = () => {
+                // Validate Printer ID
+                let printerId = document.getElementById('printer-id').value;
+                let specialCharacters = /[!@#$%^&*(),.?":{}|<>]/;
+    
+                if (specialCharacters.test(printerId)) {
+                    // If the ID contains special characters, show an error message
+                    document.getElementById('id-error').innerText = "ID cannot contain special characters";
+                    return false;
+                } else {
+                    // Clear any previous error message
+                    document.getElementById('id-error').innerText = "";
+    
+                    // Continue with other form validations if needed
+    
+                    // Toggle to the next step
+                    toggleSteps(false);
+    
+                    return false; // Prevent form submission
+                }
+            };
+        </script>
+</body>
+
+</html>
+
