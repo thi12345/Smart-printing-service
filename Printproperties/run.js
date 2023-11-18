@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function adjustInputValue(event) {
         let value = parseFloat(event.target.value);
         if (value < 0) {
-            // If the value is negative, reset to 1
+ 
             event.target.value = 0;
         } else {
 
