@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // adjust the input values margin box
     function adjustInputValue(event) {
         let value = parseFloat(event.target.value);
+        let maxValue = parseFloat(event.target.max);
+
         if (value < 0) {
-
             event.target.value = 0;
+        } else if (value > maxValue) {
+            event.target.value = maxValue;
         } else {
-
             event.target.value = value.toFixed(2);
         }
     }

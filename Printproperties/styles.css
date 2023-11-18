@@ -220,15 +220,9 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 .row {
     display: contents;
 }
-
-
 
 /* Style for the preview content area */
 .preview-box {
@@ -463,8 +457,3 @@ select[name="apply-to"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Increased shadow on hover */
 }
-
-
-
-
-/* Add the rest of the CSS for fieldset, legend, label, input, and select here */
