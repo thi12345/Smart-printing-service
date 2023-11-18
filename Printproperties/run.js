@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function adjustInputValue(event) {
         let value = parseFloat(event.target.value);
         if (value < 0) {
- 
+
             event.target.value = 0;
         } else {
 
@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     collateCheckbox.addEventListener('change', function () {
         if (collateCheckbox.checked) {
-            collateImage.src = '/image/uncollated.png';
+            collateImage.src = '/Printproperties/image/uncollated.png';
         } else {
-            collateImage.src = '/image/collated.png';
+            collateImage.src = '/Printproperties/image/collated.png';
         }
     });
 });

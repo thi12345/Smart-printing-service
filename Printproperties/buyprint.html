@@ -12,7 +12,7 @@
 
 <body>
     <div class="header">
-        <img src="/image/logo.png" alt="logo BK" />
+        <img src="/Printproperties/image/logo.png" alt="logo BK" />
         <div class="school-name">
             <h1>ĐẠI HỌC QUỐC GIA TP.HCM</h1>
             <h1>TRƯỜNG ĐẠI HỌC BÁCH KHOA</h1>
@@ -24,7 +24,7 @@
     </div>
 
 
-    <div class="information">""
+    <div class="information">
         <div class="pages-left" style="background-color: #F4D0D0;">
             <p>Số trang còn lại của bạn là yy</p>
         </div>
@@ -96,13 +96,15 @@
             <!-- preview  menu -->
             <fieldset class="preview-box">
                 <legend>Preview</legend>
-                <div class="preview-content">
+                <div class="preview-content" id="pdf-preview">
                     <!-- Content for preview or an actual preview image -->
+                    Can see once uploaded
                 </div>
                 <div class="apply-to-container">
                     <label for="apply-to">Apply to:</label>
                     <select name="apply-to" id="apply-to">
                         <option value="whole-document">Whole Document</option>
+                        <option value="forward">This point forward</option>
                         <!-- Add other options if needed -->
                     </select>
                 </div>
@@ -142,7 +144,7 @@
                 <fieldset id="Copies">
                     <legend>Copies</legend>
                     <label for="numberOfCopies">Number Of Copies</label>
-                    <img src="/image/collated.png" alt="copies" id="collateImage">
+                    <img src="/Printproperties/image/collated.png" alt="copies" id="collateImage">
                     <input type="number" id="numberOfCopies" name="numberOfCopies" min="1" value="1">
                     <label>
                         <input type="checkbox" id="collate" name="collate">
@@ -154,7 +156,7 @@
             <!--  OTHERS box -->
             <div class="settings-container">
                 <fieldset id="orientation-color">
-                    <legend>Other ranges</legend>
+                    <legend>Other settings</legend>
                     <legend>Orientation</legend>
                     <label>
                         <input type="radio" name="orientation" value="portrait" checked> Portrait

@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     width: 1024px;
     height: 768px;
     box-sizing: border-box;
@@ -76,7 +76,7 @@ body {
     /* Makes the child divs fill the parent in height */
     width: 100%;
     margin: 0;
-    box-sizing: border-box;
+
 }
 
 .pages-left,
@@ -311,9 +311,7 @@ select[name="apply-to"] {
 
 
 /*STEP 2*/
-#step2 {
-    /* The container for step 2, make sure it is styled to handle your layout */
-}
+
 
 #printRange {
     border: 1px solid #000;
@@ -380,6 +378,10 @@ select[name="apply-to"] {
     /* This ensures space between the two main containers */
     align-items: flex-start;
     /* This aligns the containers to the top */
+}
+
+#orientation-color legend {
+    font-weight: bold;
 }
 
 .print-ranges-container,
