@@ -1,0 +1,468 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 1024px;
+    height: 768px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    background-color: #FFF;
+}
+
+.header img {
+    width: 130px;
+    height: 100px;
+}
+
+.school-name {
+    display: flex;
+    flex-direction: column;
+    /* Adds some space between the logo and the text */
+}
+
+.school-name h1:first-child {
+    color: #1488d8;
+    /* The color for "ĐẠI HỌC QUỐC GIA TP.HCM" */
+    font-family: 'Arial', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.school-name h1:last-child {
+    color: #030391;
+    /* The color for "TRƯỜNG ĐẠI HỌC BÁCH KHOA" */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: auto;
+    /* Pushes the student info to the right */
+}
+
+.student-info p {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #000;
+    /* Black color for the text */
+    margin: 0;
+    text-align: right;
+    /* Aligns text to the right */
+}
+
+
+.information {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevents the boxes from wrapping */
+    justify-content: space-between;
+    /* Adds space between the boxes only if there is extra space */
+    align-items: stretch;
+    /* Makes the child divs fill the parent in height */
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pages-left,
+.additional-pages {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.pages-left {
+    background-color: #F4D0D0;
+    /* Your left box color */
+    flex: 0 0 auto;
+    /* Do not grow, do not shrink, is automatically sized */
+    width: 300px;
+    /* Fixed width for the left box */
+}
+
+.additional-pages {
+    background-color: #98ED8A;
+    /* Your right box color */
+    flex: 0 0 auto;
+    /* Do not grow, do not shrink, is automatically sized */
+    width: 300px;
+    /* Fixed width for the right box */
+    text-align: right;
+}
+
+.pages-left p,
+.additional-pages p {
+    margin: 0;
+    /* Remove default margins from paragraphs */
+}
+
+
+/*STEP 1*/
+
+/* Main navigation menu styling */
+.navigation {
+    background-color: #0044cc;
+    /* Main menu background color */
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Submenu styling for PRINT */
+.print-submenu {
+    background-color: #000080;
+    /* Submenu background color */
+    padding: 0;
+    margin: 0;
+}
+
+.print-submenu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #fff;
+    /* Separator as per image */
+}
+
+.print-submenu li {
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+
+.print-submenu li:last-child {
+    border-right: none;
+}
+
+.print-submenu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+.print-submenu a.active {
+    background-color: #0000FF;
+    /* Active submenu item background color */
+}
+
+/* Styles for the settings box */
+.settings-box {
+    font-family: Arial, sans-serif;
+    /* Chọn font chữ theo ý bạn */
+
+    margin: auto;
+}
+
+.margin-box,
+.preview-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Khoảng cách giữa margin-box và preview-box */
+    box-sizing: border-box;
+    /* Điều này đảm bảo padding và border nằm bên trong kích thước đã định */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column label {
+    margin-bottom: 5px;
+}
+
+.column input,
+.column select {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Adjust the appearance of the input number spinner if desired */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: menulist-button;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.row {
+    display: contents;
+}
+
+
+
+/* Style for the preview content area */
+.preview-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Adjust the ratio based on your needs */
+    align-items: center;
+    /* This will vertically center the select box */
+    gap: 10px;
+    margin-bottom: 20px;
+    /* Space between preview-box and action buttons */
+}
+
+/* Style for the preview content area */
+.preview-content {
+    border: 1px dashed #ccc;
+    background: #f7f7f7;
+    width: 210px;
+    height: 297px;
+    /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    /* Center the content vertically */
+    justify-content: center;
+    /* Center the content horizontally */
+}
+
+/* Style for the Apply to label and select box container */
+.apply-to-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the select box to fill the space */
+select[name="apply-to"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    /* Adjust the space between the label and the select box */
+}
+
+.actions {
+    text-align: right;
+    padding: 0 15px 15px;
+    /* Adjust padding to match other elements */
+}
+
+/* button o duoi step 1*/
+.actions button {
+    margin-left: 5px;
+    padding: 10px 20px;
+    /* Increased padding for a larger button */
+    border: 2px solid #1488d8;
+    /* Thicker border with a contrasting color */
+    background-color: #1488d8;
+    /* Brighter background color for visibility */
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+    /* Bold text for clarity */
+    border-radius: 5px;
+    /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transitions */
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover for interaction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Increased shadow on hover */
+}
+
+
+/* Add any additional styling as necessary */
+
+
+/*STEP 2*/
+#step2 {
+    /* The container for step 2, make sure it is styled to handle your layout */
+}
+
+#printRange {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#printRange legend {
+    font-weight: bold;
+}
+
+#printRange label {
+    display: block;
+    margin: 5px 0;
+}
+
+#printRange input[type="number"] {
+    width: 50px;
+}
+
+
+#Copies {
+    border: 1px solid #000;
+    padding: 15px;
+    margin: 10px 0;
+    width: 300px;
+    /* Adjust the width as needed */
+}
+
+#Copies legend {
+    font-weight: bold;
+}
+
+#Copies label {
+    display: block;
+    margin: 10px 0;
+}
+
+#Copies input[type="number"] {
+    width: 60px;
+    /* Adjust the width of the number input field */
+    margin-right: 10px;
+}
+
+#Copies input[type="checkbox"] {
+    margin-left: 5px;
+    /* Align the checkbox with the text, adjust as necessary */
+    vertical-align: middle;
+}
+
+#Copies img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    /* Ensures the image is not bigger than its container */
+    height: auto;
+    /* Maintain the aspect ratio of the image */
+}
+
+/* other ranges*/
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    /* This ensures space between the two main containers */
+    align-items: flex-start;
+    /* This aligns the containers to the top */
+}
+
+.print-ranges-container,
+.print-copies-container {
+
+    /* Your existing styles for these containers */
+    fieldset {
+        border: 1px solid #000;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    legend {
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        margin: 5px 0;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    select {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+
+}
+
+.right-settings-container {
+    /* New container for the settings on the right */
+    flex-grow: 1;
+    /* This allows the container to grow and take up available space */
+    margin-left: 20px;
+    /* Add some space between the settings and the print range/copies boxes */
+}
+
+.actions2 {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns items to the right */
+    padding: 10px;
+    /* Add padding as needed */
+
+    /* Adjust padding to match other elements */
+}
+
+/* button o duoi step 1*/
+.actions2 button {
+    margin-left: 5px;
+    padding: 10px 20px;
+    /* Increased padding for a larger button */
+    border: 2px solid #1488d8;
+    /* Thicker border with a contrasting color */
+    background-color: #1488d8;
+    /* Brighter background color for visibility */
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+    /* Bold text for clarity */
+    border-radius: 5px;
+    /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transitions */
+}
+
+.actions2 button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover for interaction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Increased shadow on hover */
+}
+
+
+
+
+/* Add the rest of the CSS for fieldset, legend, label, input, and select here */
