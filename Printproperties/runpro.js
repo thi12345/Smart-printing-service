@@ -101,4 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
             collateImage.src = '/Printproperties/image/collated.png';
         }
     });
+
+
 });
