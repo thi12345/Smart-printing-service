@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('step1').style.display = showStep1 ? 'block' : 'none';
         document.getElementById('step2').style.display = showStep1 ? 'none' : 'block';
     };
+    //hit cancel, redirect to PRINT PROPERTIES
+    var cancelButton = document.querySelector('.actions button:nth-child(2)'); // Selecting the second button in the 'actions' div
+
+    cancelButton.addEventListener('click', function () {
+        window.location.href = '../Printproperties/proprint.html'; // Redirect to 'proprint.html'
+    });
 
     toggleSteps(true); // Initialize with step1 shown
 
@@ -86,5 +92,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize the state of the page inputs on page load
     togglePageInputs();
-    
+
 });
