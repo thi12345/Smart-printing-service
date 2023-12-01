@@ -1,5 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Check if there's a saved countdown time in localStorage
+    var savedCountdown = localStorage.getItem('countdownTime');
+
+    // Set the date we're counting down to
+    var countDownDate;
+    if (savedCountdown) {
+        // Use the saved countdown time
+        countDownDate = new Date(savedCountdown);
+    } else {
+        // Set a new countdown time and save it in localStorage
+        countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 29);
+        countDownDate.setHours(countDownDate.getHours() + 15);
+        countDownDate.setMinutes(countDownDate.getMinutes() + 20);
+        countDownDate.setSeconds(countDownDate.getSeconds() + 15);
+        localStorage.setItem('countdownTime', countDownDate);
+    }
+
+    // Update the countdown every 1 second
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="timer"
+        document.getElementById("timer").innerHTML = " sau " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây ";
+
+        // If the countdown is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+            localStorage.removeItem('countdownTime'); // Clear the countdown time
+        }
+    }, 1000);
+    // end // Set the date we're counting down to
 
     // adjust the input values margin box
     function adjustInputValue(event) {
@@ -100,6 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             collateImage.src = '/Printproperties/image/collated.png';
         }
+    });
+
+    // JavaScript to handle button click
+    document.getElementById('OK').addEventListener('click', function () {
+        window.location.href = '../Choose%20printer/choose.html';
     });
 
 

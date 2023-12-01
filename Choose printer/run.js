@@ -1,5 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // thoi gian tu dong countdown
+    // Countdown Timer JavaScript
+    var countDownDate = new Date(localStorage.getItem('countdownTime'));
 
+    // Update the countdown every 1 second
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Make sure your page has an element with an ID that matches here
+        var timerElement = document.getElementById("timer");
+        if (timerElement) {
+            timerElement.innerHTML = " sau " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây ";
+        }
+
+        // If the countdown is finished, write some text and clear interval
+        if (distance < 0) {
+            clearInterval(x);
+            if (timerElement) {
+                timerElement.innerHTML = "EXPIRED";
+            }
+            localStorage.removeItem('countdownTime'); // Clear the countdown time
+        }
+    }, 1000);
+
+    //ket thuc ham countdown
+    
     // adjust the input values margin box
     function adjustInputValue(event) {
         let value = parseFloat(event.target.value);
@@ -25,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     //hit cancel, redirect to PRINT PROPERTIES
     var cancelButton = document.querySelector('.actions button:nth-child(2)'); // Selecting the second button in the 'actions' div
-
+    //
     cancelButton.addEventListener('click', function () {
         window.location.href = '../Printproperties/proprint.html'; // Redirect to 'proprint.html'
     });
