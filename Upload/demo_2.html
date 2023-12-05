@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Website</title>
     <link rel="stylesheet" href="demo_2.css">
-    <script src="demo_3.js"></script>
 </head>
 
 <body>
@@ -38,14 +37,14 @@
             <li><a href="#">MUA TRANG IN</a></li>
             <li><a href="#">THÔNG TIN SINH VIÊN</a></li>
             <li><a href="#">TRỢ GIÚP VÀ PHẢN HỒI</a></li>
-            <li><a href="/Upload/demo_1.html" class="print">PRINT</a></li>
+            <li><a href="http:/localhost/Upload/demo_1.html" class="print">PRINT</a></li>
         </ul>
     </nav>
 
     <!-- Submenu for PRINT, shown in a new row -->
     <div class="print-submenu">
         <ul>
-            <li><a href="/Upload/demo_1.html" class="active">Upload</a></li>
+            <li><a href="http://localhost/Upload/demo_1.html" class="active">Upload</a></li>
             <li><a href="#">Properties</a></li>
             <li><a href="#">Printer</a></li>
         </ul>
@@ -83,25 +82,38 @@
             </div>
         </div>
         <div class="box0">
-            <div class="frame1">
-                <div class="text-wrapper">Tải tệp tin</div>
-                <a href="/Upload/demo_3.html" class="overlap-group">
-                    <div class="rectangle"></div>
-                    <img class="click" src="picture/click-1.png" />
-                    <img class="cloud-uploading-icon" src="picture/cloud-uploading-icon.png" />
-                    <p class="div">Bạn có thể kéo và thả tập tin vào đây để thêm chúng.</p>
-                </a>
-                <div class="overlap-group1">
-                    <div class="rectangle1"></div>
-                    <a href="/Upload/demo_3.html" class="text-wrapper-1">Xác nhận</a>
+
+            <div class="container">
+                <h1>Tải tệp tin</h1>
+                <div class="drop-section">
+                    <div class="col">
+                        <div class="click-icon">
+                            <a href="http://localhost/Upload/demo_3.html">
+                                <img src="picture/click-1.png" alt="cloud">
+                            </a>
+                        </div>
+                        <span>Bạn có thể kéo và thả tập tin vào đây để thêm chúng.</span>
+                        <button class="file-selector">Browse Files</button>
+                        <input type="file" class="file-selector-input" multiple>
+                    </div>
+                    <div class="col">
+                        <div class="drop-here">Drop Here</div>
+                    </div>
                 </div>
-                <div class="overlap">
-                    <div class="div1"></div>
-                    <a href="/Upload/demo_3.html" class="text-wrapper-2">Hủy</a>
+                <div class="list-section">
+                    <div class="list-title">Uploaded Files</div>
+                    <div class="list"></div>
                 </div>
-                <p class="p">Tải tệp tin lên :</p>
+                <div class="temp">
+                    <a href="http://localhost/Upload/demo_3.html" class="temp1">Xác nhận</a>
+                    <a href="http://localhost/Upload/demo_1.html" class="temp2">Hủy</a>
+                </div>
             </div>
+
+
         </div>
+    </div>
+    <script src="demo_2.js"></script>
 </body>
 
 </html>

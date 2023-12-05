@@ -303,67 +303,58 @@ select[name="apply-to"] {
 
 /* Add any additional styling as necessary */
 
-
-/*STEP 2*/
-
-
-#printRange {
-    border: 1px solid #000;
-    padding: 10px;
-    margin-bottom: 20px;
+.notification-container {
+    text-align: center;
+    /* Center text and icon */
+    background-color: #f2f2f2;
+    /* Light grey background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    max-width: 300px;
+    /* Adjust width as needed */
+    margin: auto;
+    /* Center the container */
 }
 
-#printRange legend {
-    font-weight: bold;
+.notification-icon {
+    color: #4CAF50;
+    /* Green color for the check icon */
+    font-size: 70px;
+    /* Size of the icon */
+    margin-bottom: 10px;
+    /* Space between the icon and the message */
 }
 
-#printRange label {
+.notification-message h2 {
+    margin: 0;
+    color: #4CAF50;
+    /* Green color for the 'SUCCESS' text */
+    font-size: 30px;
+    /* Size of the heading */
+}
+
+.notification-message p {
+    margin: 0;
+    color: #666;
+    /* Medium grey for the paragraph */
+    font-size: 16px;
+    /* Size of the paragraph */
+}
+
+/* If you're using an SVG or image for the check icon */
+.notification-icon svg,
+.notification-icon img {
+    height: 50px;
+    /* Adjust the size as needed */
+    width: auto;
     display: block;
-    margin: 5px 0;
-}
-
-#printRange input[type="number"] {
-    width: 50px;
+    margin: auto;
+    /* Center the icon */
 }
 
 
-#Copies {
-    border: 1px solid #000;
-    padding: 15px;
-    margin: 10px 0;
-    width: 300px;
-    /* Adjust the width as needed */
-}
-
-#Copies legend {
-    font-weight: bold;
-}
-
-#Copies label {
-    display: block;
-    margin: 10px 0;
-}
-
-#Copies input[type="number"] {
-    width: 60px;
-    /* Adjust the width of the number input field */
-    margin-right: 10px;
-}
-
-#Copies input[type="checkbox"] {
-    margin-left: 5px;
-    /* Align the checkbox with the text, adjust as necessary */
-    vertical-align: middle;
-}
-
-#Copies img {
-    display: block;
-    margin: 10px 0;
-    max-width: 100%;
-    /* Ensures the image is not bigger than its container */
-    height: auto;
-    /* Maintain the aspect ratio of the image */
-}
 
 /* other ranges*/
 .flex-container {

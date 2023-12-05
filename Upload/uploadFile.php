@@ -28,7 +28,7 @@ if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] == UPLOAD
     // Kiểm tra định dạng file
     if (in_array($fileExtension, $allowedfileExtensions)) {
         // Sử dụng tên file cố định để thay thế file cũ
-        $newFileName = 'latest_uploaded_file.' . $fileExtension;
+        $newFileName = 'fixed_filename.' . $fileExtension;
         $dest_path = $uploadDirectory . $newFileName;
 
         // Chuyển file tới thư mục lưu trữ

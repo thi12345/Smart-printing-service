@@ -1,37 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
     // thoi gian tu dong countdown
     // Countdown Timer JavaScript
-    var countDownDate = new Date(localStorage.getItem('countdownTime'));
+    var savedCountdown = localStorage.getItem('countdownTime');
+    var pagesLeft = parseInt(localStorage.getItem('pagesLeft') || '10'); // Lấy số trang còn lại hoặc mặc định là 10
+
+    // Hàm để cài đặt lại thời gian đếm ngược
+    function resetCountdown() {
+        var newCountDownDate = new Date();
+        newCountDownDate.setDate(newCountDownDate.getDate() + 0);
+        newCountDownDate.setHours(newCountDownDate.getHours() + 0);
+        newCountDownDate.setMinutes(newCountDownDate.getMinutes() + 5);
+        newCountDownDate.setSeconds(newCountDownDate.getSeconds() + 15);
+        localStorage.setItem('countdownTime', newCountDownDate);
+        return newCountDownDate;
+    }
+
+    var countDownDate = savedCountdown ? new Date(savedCountdown) : resetCountdown();
 
     // Update the countdown every 1 second
     var x = setInterval(function () {
         var now = new Date().getTime();
         var distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes, and seconds
+        if (distance < 0) {
+            // Cộng thêm 10 trang và cài đặt lại thời gian đếm ngược
+            pagesLeft += 30;
+            localStorage.setItem('pagesLeft', pagesLeft.toString());
+            document.querySelector('.pages-left p').textContent = "Số trang còn lại của bạn là " + pagesLeft;
+
+            // Cài đặt lại thời gian đếm ngược và tiếp tục đếm
+            countDownDate = resetCountdown();
+            distance = countDownDate - now; // Tính lại khoảng cách thời gian sau khi cài đặt lại
+        }
+
+        // Tính toán và hiển thị thời gian còn lại
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Make sure your page has an element with an ID that matches here
-        var timerElement = document.getElementById("timer");
-        if (timerElement) {
-            timerElement.innerHTML = " sau " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây ";
-        }
-
-        // If the countdown is finished, write some text and clear interval
-        if (distance < 0) {
-            clearInterval(x);
-            if (timerElement) {
-                timerElement.innerHTML = "EXPIRED";
-            }
-            localStorage.removeItem('countdownTime'); // Clear the countdown time
-        }
+        document.getElementById("timer").innerHTML = " sau " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây ";
     }, 1000);
 
     //ket thuc ham countdown
-    
+
     // adjust the input values margin box
     function adjustInputValue(event) {
         let value = parseFloat(event.target.value);
