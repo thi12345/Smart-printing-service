@@ -1,3 +1,5 @@
+Phần UPLOAD sử dụng localhost (XAMPP)
+
 các bước push code lên github
 
 B1: Clone dự án về bằng lệnh git clone https://github.com/thi12345/Smart-printing-service.git
