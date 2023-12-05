@@ -1,520 +1,550 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 .logo {
-    padding: 10px;
+  padding: 10px;
 }
 
 .logo img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 .header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #FFF;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #FFF;
 }
 
 .school-name h1 {
-    color: #000;
-    font-size: 1.2em;
+  color: #000;
+  font-size: 1.2em;
 }
+
 .student-info {
-    margin-left: auto;
+  margin-left: auto;
 }
+
 .student-info p {
-    margin: 0;
-    color: #000;
+  margin: 0;
+  color: #000;
 }
 
 .information {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
-.pages-left, .additional-pages {
-    padding: 10px;
-    width: 50%;
+.pages-left,
+.additional-pages {
+  padding: 10px;
+  width: 50%;
 }
 
 /* Main navigation menu styling */
 .navigation {
-    background-color: #0096FF; /* Main menu background color */
-    padding: 0;
-    margin: 0;
+  background-color: #0096FF;
+  /* Main menu background color */
+  padding: 0;
+  margin: 0;
 }
 
 .navigation ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
 }
 
 .navigation li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
 }
 
 /* Submenu styling for PRINT */
 .print-submenu {
-    background-color: #BFBFBF; /* Submenu background color */
-    padding: 0;
-    margin: 0;
+  background-color: #BFBFBF;
+  /* Submenu background color */
+  padding: 0;
+  margin: 0;
 }
 
 .print-submenu ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid #fff; /* Separator as per image */
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #fff;
+  /* Separator as per image */
 }
 
 .print-submenu li {
-    flex-grow: 1;
-    text-align: center;
-    border-right: 1px solid #fff;
+  flex-grow: 1;
+  text-align: center;
+  border-right: 1px solid #fff;
 }
 
 .print-submenu li:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .print-submenu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 0;
-    display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
 }
-.print{
+
+.print {
   cursor: pointer;
-    color: #000000;
-    text-decoration: none;
-    background-color: #0000FF;
+  color: #000000;
+  text-decoration: none;
+  background-color: #0000FF;
 }
-.active{
-    cursor: pointer;
-    color: #000000;
-    text-decoration: none;
+
+.active {
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
 }
+
 .print-submenu a.active {
-    background-color: #0000FF; /* Active submenu item background color */
+  background-color: #0000FF;
+  /* Active submenu item background color */
 }
-.Upload{
-    position: relative;
-    width: 100%;
-    height: 680px;
-    background-color: #FFF ;
+
+.Upload {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  background-color: #FFF;
 }
 
 .horizontal-line {
-    position: absolute;
-    width: 100%;
-    border-top: 2px solid black;
-    top: 10%; /* Đặt đường ngang giữa hình chữ nhật */
-    z-index: 1;
-  }
-.box1{
-    position: absolute;
-    top: 50%;
-    left: 75.6%;
-    transform: translate(-50%, -50%);
-    width: 48.85%;
-    height: 100%;
-    background-color:#FFF ;
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid black;
+  top: 10%;
+  /* Đặt đường ngang giữa hình chữ nhật */
+  z-index: 1;
 }
-.box1 .p{
-    text-align: center;
-    font-size: 200%; /* Kích thước chữ là 20px */
-    font-family: 'Arial', sans-serif; /* Kiểu chữ Arial hoặc font mặc định sans-serif */
-    font-weight: bold; /* Chữ in đậm */
-    color: #333; /* Màu chữ là màu đen (#333) */
+
+.box1 {
+  position: absolute;
+  top: 50%;
+  left: 75.6%;
+  transform: translate(-50%, -50%);
+  width: 48.85%;
+  height: 100%;
+  background-color: #FFF;
 }
+
+.box1 .p {
+  text-align: center;
+  font-size: 200%;
+  /* Kích thước chữ là 20px */
+  font-family: 'Arial', sans-serif;
+  /* Kiểu chữ Arial hoặc font mặc định sans-serif */
+  font-weight: bold;
+  /* Chữ in đậm */
+  color: #333;
+  /* Màu chữ là màu đen (#333) */
+}
+
 .frame {
-    position: relative;
-    width: 45%;
-    height: 50%;
-    top : 10%;
-    left : 10%;
-  }
-  
-  .frame .div-wrapper {
-    width: 105%;
-    height: 15%;
-    top: 115%;
-    left: 0;
-    position: absolute;
-    background-color: #d9d9d9;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .frame .text-wrapper {
-    position: absolute;
-    top: 1%;
-    left: 7%;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .frame .div-wrapper-1 {
-    width: 50%;
-    height: 10%;
-    top: 0;
-    left: 0%;
-    position: absolute;
-    background-color: #d9d9d9;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .frame .text-wrapper-2 {
-    position: absolute;
-    top: 20%;
-    left: 37%;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .frame .div-wrapper-2 {
-    width: 50%;
-    height: 10%;
-    top: 0;
-    left: 130%;
-    position: absolute;
-    background-color: #d9d9d9;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .frame .text-wrapper-3 {
-    position: absolute;
-    top: 20%;
-    left: 37%;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .frame .div-wrapper-3 {
-    width: 50%;
-    height: 10%;
-    top: 0;
-    left: 65%;
-    position: absolute;
-    background-color: #d9d9d9;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .frame .text-wrapper-4 {
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .frame .arrow {
-    left: 52%;
-    position: absolute;
-    width: 12%;
-    height: 5%;
-    top: 3%;
-  }
-  
-  .frame .arrow0 {
-    left: 117%;
-    position: absolute;
-    width: 12%;
-    height: 5%;
-    top: 3%;
-  }
-  
-  .frame .div-2 {
-    width: 180%;
-    height: 65%;
-    top: 30%;
-    left: 0;
-    position: absolute;
-    background-color: #d9d9d9;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  
-  .frame .p {
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0%;
-    line-height: normal;
-  }
+  position: relative;
+  width: 45%;
+  height: 50%;
+  top: 10%;
+  left: 10%;
+}
 
-  .frame .PDF {
-    position: absolute;
-    width: 15%;
-    height: 35%;
-    top: 9%;
-    left: 52%;
-  }
+.frame .div-wrapper {
+  width: 105%;
+  height: 15%;
+  top: 115%;
+  left: 0;
+  position: absolute;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  overflow: hidden;
+}
 
-  .frame .DOC {
-    position: absolute;
-    width: 15%;
-    height: 35%;
-    top: 9%;
-    left: 72%;
-  }
-  
-  .frame .PPT {
-    position: absolute;
-    width: 15%;
-    height: 35%;
-    top: 9%;
-    left: 32%;
-  }
-  
-  .frame .PNG {
-    position: absolute;
-    width: 15%;
-    height: 35%;
-    top: 60%;
-    left: 32%;
-  }
-  
+.frame .text-wrapper {
+  position: absolute;
+  top: 1%;
+  left: 7%;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .div-wrapper-1 {
+  width: 50%;
+  height: 10%;
+  top: 0;
+  left: 0%;
+  position: absolute;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.frame .text-wrapper-2 {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-wrapper-2 {
+  width: 50%;
+  height: 10%;
+  top: 0;
+  left: 130%;
+  position: absolute;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.frame .text-wrapper-3 {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-wrapper-3 {
+  width: 50%;
+  height: 10%;
+  top: 0;
+  left: 65%;
+  position: absolute;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.frame .text-wrapper-4 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .arrow {
+  left: 52%;
+  position: absolute;
+  width: 12%;
+  height: 5%;
+  top: 3%;
+}
+
+.frame .arrow0 {
+  left: 117%;
+  position: absolute;
+  width: 12%;
+  height: 5%;
+  top: 3%;
+}
+
+.frame .div-2 {
+  width: 180%;
+  height: 65%;
+  top: 30%;
+  left: 0;
+  position: absolute;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.frame .p {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0%;
+  line-height: normal;
+}
+
+.frame .PDF {
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: 9%;
+  left: 52%;
+}
+
+.frame .DOC {
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: 9%;
+  left: 72%;
+}
+
+.frame .PPT {
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: 9%;
+  left: 32%;
+}
+
+.frame .PNG {
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: 60%;
+  left: 32%;
+}
+
 .frame .JPEG {
-    position: absolute;
-    width: 15%;
-    height: 35%;
-    top: 60%;
-    left: 52%;
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: 60%;
+  left: 52%;
 }
-.box0{
-    position: absolute;
-    top: 50%;
-    left: 24.45%;
-    transform: translate(-50%, -50%);
-    width: 48.85%;
-    height: 100%;
-    background-color: #ffffff ;
+
+.box0 {
+  position: absolute;
+  top: 50%;
+  left: 24.45%;
+  transform: translate(-50%, -50%);
+  width: 48.85%;
+  height: 100%;
+  background-color: #ffffff;
 }
+
 .frame0 {
-    position: relative;
-    top: 20%;
-    left: 10% ;
-  }
-  
-  .frame0  .overlap-group {
-    position: absolute;
-    width: 20%;
-    height: 10%;
-    top: 426px;
-    left: 10%;
-    border-radius: 45px;
-  }
-  
-  .frame0 .rectangle {
-    width: 80%;
-    height: 47px;
-    top: 0;
-    background-color: #0096ff;
-    border-radius: 45px;
-    position: absolute;
-    left: 0;
-  }
-  
-  .frame0 .text-wrapper {
-    position: absolute;
-    width: 50%;
-    height: 10%;
-    top: 15px;
-    left: 15%;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    cursor: pointer;
-    color: #000000;
-    text-decoration: none; /* Remove underline for the link */
-  }
-  
-  .frame0 .overlap {
-    position: absolute;
-    width: 20%;
-    height: 10%;
-    top: 426px;
-    left: 60%;
-  }
-  
-  .frame0 .div {
-    width: 80%;
-    height: 47px;
-    top: 0;
-    background-color: #d9d9d9;
-    border-radius: 45px;
-    position: absolute;
-    left: 0;
-  }
-  
-  .frame0 .text-wrapper-2 {
-    position: absolute;
-    width: 50%;
-    height: 10%;
-    top: 15px;
-    left: 15%;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .frame0 .div-wrapper {
-    position: absolute;
-    width: 10%;
-    height: 31px;
-    top: 24px;
-    left: 0;
-    background-color: #d9d9d9;
-    border-radius: 10px;
-    overflow: hidden;
+  position: relative;
+  top: 20%;
+  left: 10%;
+}
+
+.frame0 .overlap-group {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  top: 426px;
+  left: 10%;
+  border-radius: 45px;
+}
+
+.frame0 .rectangle {
+  width: 80%;
+  height: 47px;
+  top: 0;
+  background-color: #0096ff;
+  border-radius: 45px;
+  position: absolute;
+  left: 0;
+}
+
+.frame0 .text-wrapper {
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  top: 15px;
+  left: 15%;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+  /* Remove underline for the link */
+}
+
+.frame0 .overlap {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  top: 426px;
+  left: 60%;
+}
+
+.frame0 .div {
+  width: 80%;
+  height: 47px;
+  top: 0;
+  background-color: #d9d9d9;
+  border-radius: 45px;
+  position: absolute;
+  left: 0;
+}
+
+.frame0 .text-wrapper-2 {
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  top: 15px;
+  left: 15%;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame0 .div-wrapper {
+  position: absolute;
+  width: 10%;
+  height: 31px;
+  top: 24px;
+  left: 0;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .frame0 .text-wrapper-3 {
-    position: absolute;
-    width: 75%;
-    height: 10%;
-    top: 23%;
-    left: 14%;
-    font-family: "Inter-Medium", Helvetica;
-    font-weight: 500;
-    color: #000000;
-    font-size: 100%;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    cursor: pointer;
-    color: #000000;
-    text-decoration: none; /* Remove underline for the link */
+  position: absolute;
+  width: 75%;
+  height: 10%;
+  top: 23%;
+  left: 14%;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 100%;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+  /* Remove underline for the link */
 }
-  
-  .frame0 .p {
-    position: absolute;
-    width: 75%;
-    height: 10%;
-    top: -40px;
-    left: -28%;
-    font-family: "Inter-Medium", Helvetica;
-    font-weight: 500;
-    color: #000000;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .frame0 .text-wrapper-4 {
-    position: absolute;
-    width: 75%;
-    height: 10%;
-    top: 74px;
-    left: -28%;
-    font-family: "Inter-Medium", Helvetica;
-    font-weight: 500;
-    color: #000000;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .frame0 .overlap-2 {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    top: 113px;
-    left: 2%;
-  }
-  
+
+.frame0 .p {
+  position: absolute;
+  width: 75%;
+  height: 10%;
+  top: -40px;
+  left: -28%;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame0 .text-wrapper-4 {
+  position: absolute;
+  width: 75%;
+  height: 10%;
+  top: 74px;
+  left: -28%;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame0 .overlap-2 {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 113px;
+  left: 2%;
+}
+
 .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 36px;
-    height: 680px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 680px;
 }
+
 .box .rectangle {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #D9D9D9;
-} 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #D9D9D9;
+}
 
 /*page2*/
 .frame1 {
   position: absolute;
-  width: 100%; /* Thay đổi */
-  height: 100%; /* Thay đổi */
+  width: 100%;
+  /* Thay đổi */
+  height: 100%;
+  /* Thay đổi */
 }
 
 .frame1 .text-wrapper {
   position: absolute;
-  font-family: 'Arial', sans-serif; /* Kiểu chữ Arial hoặc font mặc định sans-serif */
-  font-weight: bold; /* Chữ in đậm */
-  top: 4%; 
+  font-family: 'Arial', sans-serif;
+  /* Kiểu chữ Arial hoặc font mặc định sans-serif */
+  font-weight: bold;
+  /* Chữ in đậm */
+  top: 4%;
   left: 40%;
   font-family: "Inter-Medium", Helvetica;
   color: #000000;
-  font-size: 200%; 
+  font-size: 200%;
   text-align: center;
 }
 
 .frame1 .overlap-group {
   position: absolute;
-  width: 92.03%; 
-  height: 63.24%; 
-  top: 36.99%; 
-  left: 7.97%; 
+  width: 92.03%;
+  height: 63.24%;
+  top: 36.99%;
+  left: 7.97%;
   cursor: pointer;
   color: #000000;
   text-decoration: none;
@@ -522,39 +552,39 @@ body {
 
 .frame1 .rectangle {
   position: absolute;
-  width: 90%; 
-  height: 60%; 
-  top: -15%; 
+  width: 90%;
+  height: 60%;
+  top: -15%;
   left: 0;
   background-color: #d9d9d9;
-  border-radius: 30px; 
+  border-radius: 30px;
 }
 
 .frame1 .click {
   position: absolute;
-  width: 30%; 
-  height: 30%; 
-  top: -5%; 
-  left: 30%; 
+  width: 30%;
+  height: 30%;
+  top: -5%;
+  left: 30%;
 }
 
 .frame1 .cloud-uploading-icon {
   position: absolute;
-  width: 15%; 
-  height: 15%; 
+  width: 15%;
+  height: 15%;
   top: -15%;
-  left: 1%; 
+  left: 1%;
 }
 
 .frame1 .div {
   position: absolute;
   width: 90%;
-  top: 30%; 
-  left: 0%; 
+  top: 30%;
+  left: 0%;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
   color: #111112;
-  font-size: 100%; 
+  font-size: 100%;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -562,17 +592,18 @@ body {
 
 .frame1 .p {
   position: absolute;
-  top: 15%; 
-  left: 5%; 
+  top: 15%;
+  left: 5%;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 100%; 
+  font-size: 100%;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
 }
-.frame1  .overlap-group1 {
+
+.frame1 .overlap-group1 {
   position: absolute;
   width: 20%;
   height: 10%;
@@ -648,21 +679,27 @@ body {
 /*page3*/
 .frame2 {
   position: absolute;
-  width: 100%; /* Thay đổi */
-  height: 100%; /* Thay đổi */
+  width: 100%;
+  /* Thay đổi */
+  height: 100%;
+  /* Thay đổi */
 }
+
 .frame2 .text {
   position: absolute;
-  font-family: 'Arial', sans-serif; /* Kiểu chữ Arial hoặc font mặc định sans-serif */
-  font-weight: bold; /* Chữ in đậm */
-  top: 4%; 
+  font-family: 'Arial', sans-serif;
+  /* Kiểu chữ Arial hoặc font mặc định sans-serif */
+  font-weight: bold;
+  /* Chữ in đậm */
+  top: 4%;
   left: 40%;
   font-family: "Inter-Medium", Helvetica;
   color: #000000;
-  font-size: 200%; 
+  font-size: 200%;
   text-align: center;
 }
-.frame2  .overlap-group1 {
+
+.frame2 .overlap-group1 {
   position: absolute;
   width: 20%;
   height: 10%;
@@ -680,6 +717,7 @@ body {
   position: absolute;
   left: 0;
 }
+
 .frame2 .text-wrapper-0 {
   position: absolute;
   width: 50%;
@@ -733,6 +771,7 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
 .frame2 .overlap-group {
   height: 100%;
   position: relative;
@@ -850,6 +889,7 @@ body {
   top: 25.5%;
   width: 17%;
 }
+
 .frame2 .text-wrapper-2-1 {
   color: #000000;
   font-family: "Inter-Regular", Helvetica;
@@ -879,7 +919,7 @@ body {
   overflow: hidden;
   position: absolute;
   top: 31%;
-  width: %;
+  width: 30%;
 }
 
 

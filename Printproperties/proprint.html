@@ -7,12 +7,12 @@
     <title>Printing Service</title>
     <link rel="stylesheet" href="stylespro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="header">
-        <img src="/Printproperties/image/logo.png" alt="logo BK" />
+        <img src="/Choose printer/image/logo.png" />
         <div class="school-name">
             <h1>ĐẠI HỌC QUỐC GIA TP.HCM</h1>
             <h1>TRƯỜNG ĐẠI HỌC BÁCH KHOA</h1>
@@ -26,13 +26,15 @@
 
     <div class="information">
         <div class="pages-left" style="background-color: #F4D0D0;">
-            <p>Số trang còn lại của bạn là yy</p>
+            <p>Số trang còn lại của bạn là 20</p>
         </div>
         <div id="countdown" class="additional-pages" style="background-color: #98ED8A;">
             <p>Bạn sẽ nhận thêm 30 trang miễn phí</p>
             <p id="timer"> sau 29 ngày 15 giờ 20 phút 15 giây</p>
         </div>
     </div>
+
+
 
     <!-- Main navigation menu -->
     <nav class="navigation">
@@ -96,10 +98,17 @@
             <!-- preview  menu -->
             <fieldset class="preview-box">
                 <legend>Preview</legend>
-                <div class="preview-content" id="pdf-preview">
-                    <!-- Content for preview or an actual preview image -->
-                    Can see once uploaded
+                <div class="preview-content" id="file-preview">
+                    <script>
+                        $(document).ready(function () {
+                            $.get("/Printproperties/truysuat.php", function (data, status) {
+                                $("#file-preview").html(data);
+                            });
+                        });
+                    </script>
+                    <!-- Nội dung xem trước sẽ hiển thị ở đây -->
                 </div>
+
                 <div class="apply-to-container">
                     <label for="apply-to">Apply to:</label>
                     <select name="apply-to" id="apply-to">

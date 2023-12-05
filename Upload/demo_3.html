@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Website</title>
     <link rel="stylesheet" href="demo_2.css">
-    <script src="myScript.js"></script>
+
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="logo"><img src="picture/Logo-DH-Bach-Khoa-HCMUT 1.png" alt=""></div>
         <div class="school-name">
             <p>ĐẠI HỌC QUỐC GIA TP.HCM </p>
-            <p>TRƯỜNG ĐẠI HỌC BÁCH KHOA</p>    
+            <p>TRƯỜNG ĐẠI HỌC BÁCH KHOA</p>
         </div>
         <div class="student-info">
             <p>Họ và tên: Nguyễn Văn A - xxxxxx</p>
@@ -38,81 +38,101 @@
             <li><a href="#">MUA TRANG IN</a></li>
             <li><a href="#">THÔNG TIN SINH VIÊN</a></li>
             <li><a href="#">TRỢ GIÚP VÀ PHẢN HỒI</a></li>
-            <li><a href="http://127.0.0.1:5500/demo_1.html" class="print">PRINT</a></li>
+            <li><a href="/Upload/demo_1.html" class="print">PRINT</a></li>
         </ul>
     </nav>
 
     <!-- Submenu for PRINT, shown in a new row -->
     <div class="print-submenu">
         <ul>
-            <li><a href="http://127.0.0.1:5500/demo_1.html" class="active">Upload</a></li>
+            <li><a href="/Upload/demo_1.html" class="active">Upload</a></li>
             <li><a href="#">Properties</a></li>
             <li><a href="#">Printer</a></li>
         </ul>
     </div>
-    <div class="Upload" >
+    <div class="Upload">
         <div class="horizontal-line"></div>
-        <div class="box"><div class="rectangle"></div></div>
+        <div class="box">
+            <div class="rectangle"></div>
+        </div>
         <div class="box1">
             <p class="p">Hướng dẫn sử dụng dịch vụ</p>
             <div class="frame">
-                <div class="div-wrapper"><p class="text-wrapper">Kích thước tối đa cho các tập tin : 500 MB</p></div>
-                <div class="div-wrapper-1"><div class="text-wrapper-2">Upload</div></div>
-                <div class="div-wrapper-2"><div class="text-wrapper-3">Printer</div></div>
-                <div class="div-wrapper-3"><div class="text-wrapper-4">Properties</div></div>
+                <div class="div-wrapper">
+                    <p class="text-wrapper">Kích thước tối đa cho các tập tin : 500 MB</p>
+                </div>
+                <div class="div-wrapper-1">
+                    <div class="text-wrapper-2">Upload</div>
+                </div>
+                <div class="div-wrapper-2">
+                    <div class="text-wrapper-3">Printer</div>
+                </div>
+                <div class="div-wrapper-3">
+                    <div class="text-wrapper-4">Properties</div>
+                </div>
                 <img class="arrow" src="picture/arrow.png" />
                 <img class="arrow0" src="picture/arrow.png" />
                 <div class="div-2">
-                  <p class="p">Kiểu dữ liệu hợp lệ :</p>
-                  <img class="PDF" src="picture/PDF.png" />
-                  <img class="DOC" src="picture/DOC.png" />
-                  <img class="PPT" src="picture/PPT.png" />
-                  <img class="PNG" src="picture/PNG.png" />
-                  <img class="JPEG" src="picture/JPEG.png" />
+                    <p class="p">Kiểu dữ liệu hợp lệ :</p>
+                    <img class="PDF" src="picture/PDF.png" />
+                    <img class="DOC" src="picture/DOC.png" />
+                    <img class="PPT" src="picture/PPT.png" />
+                    <img class="PNG" src="picture/PNG.png" />
+                    <img class="JPEG" src="picture/JPEG.png" />
                 </div>
             </div>
         </div>
         <div class="box0">
             <div class="frame2">
                 <div class="text">Tải tệp tin</div>
+
+                <!-- XÁC nhận -->
                 <div class="overlap-group1">
                     <div class="rectangle1"></div>
-                    <a href="http://127.0.0.1:5500/demo_4.html" class="text-wrapper-0">Xác nhận</a>
+                    <a class="text-wrapper-0" onclick="checkFileAndSubmit();">Xác nhận</a>
                 </div>
+
                 <div class="overlap">
                     <div class="div1"></div>
-                    <a href="http://127.0.0.1:5500/demo_1.html" class="text-wrapper-1">Hủy</a>
+                    <a href="/Upload/demo_1.html" class="text-wrapper-1">Hủy</a>
                 </div>
                 <div class="overlap-group2">
                     <img class="rectangle" src="picture/rectangle-15.png" />
                     <div class="text-wrapper">Tác giả :</div>
                     <div class="div">Đính kèm :</div>
                     <div class="div-wrapper">
-                      <div class="text-wrapper-2">Tệp tin cá nhân</div>
+                        <div class="text-wrapper-2">Tệp tin cá nhân</div>
                     </div>
                     <img class="nuovo" src="picture/nuovo-19.png" />
                     <div class="text-wrapper-3">Chọn tệp tin</div>
                     <img class="line" src="picture/line-4.png" />
                     <img class="line0" src="picture/line-5.png" />
                     <div class="div-wrapper-2">
-                      <div class="text-wrapper-2-1">Tải một tệp tin</div>
+                        <div class="text-wrapper-2-1">Tải một tệp tin</div>
                     </div>
                     <img class="nuovo-2" src="picture/nuovo-06.png" />
+
+                    
+                    <!-- upload file  -->
                     <div class="div-wrapper-3">
-                      <form id="uploadForm" enctype="multipart/form-data">
-                        <label for="fileInput"></label>
-                        <input type="file" id="fileInput" onclick="uploadFile()" accept=".pdf, .doc, .ppt, .png, .jpg">
-                      </form>
+                        <form id="uploadForm" enctype="multipart/form-data" method="post" action="uploadFile.php">
+                            <input type="file" id="fileInput" name="uploadedFile" accept=".pdf,.doc,.docx,.png,.jpeg,.ppt" onchange="onFileUpload(event)">
+
+                        </form>
                     </div>
+
                     <div class="div-wrapper-4">
                         <label for="nameInput"></label>
                         <input type="text" id="nameInput" onclick="showGreeting()" placeholder="Nhập tên">
                         <p id="greetingMessage"></p>
                     </div>
                     <div class="div-wrapper-5">
-                      <div class="text-wrapper-6">Tải lên tệp tin</div>
+                        <div class="text-wrapper-6">Tải lên tệp tin</div>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
+        <script src="demo_3.js"></script>
+</body>
+
 </html>

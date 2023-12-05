@@ -2,7 +2,7 @@
 var numberSelect = document.getElementById("numberSelect");
 var customNumberInput = document.getElementById("customNumber");
 
-numberSelect.addEventListener("change", function() {
+numberSelect.addEventListener("change", function () {
     var selectedValue = numberSelect.value;
 
     if (selectedValue === "custom") {
@@ -16,38 +16,55 @@ numberSelect.addEventListener("change", function() {
     // Hiển thị thông báo hoặc thực hiện các thao tác khác dựa trên giá trị được chọn
     document.getElementById("selectedNumber").textContent = "Bạn đã chọn: " + selectedValue;
 });
-function uploadFile() {
-  var fileInput = document.getElementById("fileInput");
 
-  if (fileInput.files.length > 0) {
-      var selectedFile = fileInput.files[0];
 
-      // Kiểm tra định dạng của file
-      var allowedFormats = ["pdf", "doc", "ppt", "png", "jpg"];
-      var fileExtension = selectedFile.name.split('.').pop().toLowerCase();
+function checkFileAndSubmit() {
+    var fileInput = document.getElementById("fileInput");
 
-      if (allowedFormats.includes(fileExtension)) {
-          // Tạo FormData để chứa file và các dữ liệu khác (nếu có)
-          var formData = new FormData();
-          formData.append("file", selectedFile);
-
-          // Gửi dữ liệu bằng cách sử dụng XMLHttpRequest hoặc fetch API
-          // Ở đây, tôi sử dụng fetch API như là một ví dụ đơn giản
-          fetch("/upload", {
-              method: "POST",
-              body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-              console.log("File đã được tải lên thành công", data);
-          })
-          .catch(error => {
-              console.error("Lỗi khi tải lên file", error);
-          });
-      } else {
-          alert("Vui lòng chọn một file có định dạng hợp lệ.");
-      }
-  } else {
-      alert("Vui lòng chọn một file.");
-  }
+    if (fileInput.files.length == 0) {
+        alert("Vui lòng chọn một file.");
+    } else {
+        // Submit the form
+        document.getElementById("uploadForm").submit();
+    }
 }
+
+
+
+
+
+// function uploadFile() {
+//     var formData = new FormData();
+//     var fileInput = document.getElementById('fileInput');
+//     var preview = document.getElementById('pdf-preview');
+
+//     if (fileInput.files.length > 0) {
+//         var file = fileInput.files[0];
+//         formData.append('uploadedFile', file);
+
+//         fetch('/Upload/uploadFile.php', {
+//             method: 'POST',
+//             body: formData
+//         })
+//             .then(response => response.json())
+//             .then(data => {
+//                 if (data.success) {
+//                     // Hiển thị file dựa trên kiểu file
+//                     switch (file.type) {
+//                         case 'application/pdf':
+//                             preview.innerHTML = '<embed src="' + data.path + '" width="210" height="297" type="application/pdf">';
+//                             break;
+//                         // Các case khác cho các loại file được hỗ trợ
+//                     }
+//                 } else {
+//                     alert('Failed to upload file');
+//                 }
+//             })
+//             .catch(error => {
+//                 console.error('Error:', error);
+//             });
+//     } else {
+//         alert("Please select a file to upload.");
+//     }
+// }
+
