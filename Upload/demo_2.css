@@ -517,7 +517,7 @@ body {
   visibility: visible;
   transition-duration: 0.2s;
   transform: scale(1);
-  width: 300px;
+  width: 374px;
   margin: auto;
 }
 .drop-section div.col:last-child{
@@ -562,11 +562,10 @@ body {
   color: #707EA0;
 }
 .drop-section span{
-  margin-top: 30px;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 .drop-section button{
-  display: none;
   color: white;
   background-color: #5874C6;
   border: none;

@@ -1,6 +1,7 @@
 <?php
+session_start();
 if (!empty($_FILES['file'])) {
-    $allowedExtensions = ['pdf', 'docx', 'doc', 'ppt', 'jpeg', 'png'];
+    $allowedExtensions = ['pdf', 'docx', 'doc', 'ppt','jpg', 'jpeg', 'png'];
     $targetDir = 'uploads/';
     $filename = basename($_FILES['file']['name']);
     $fileType = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
@@ -11,6 +12,7 @@ if (!empty($_FILES['file'])) {
         $targetFilePath = $targetDir . $fixedFilename;
 
         if (move_uploaded_file($_FILES['file']['tmp_name'], $targetFilePath)) {
+            $_SESSION['latestFile'] = $fixedFilename; // Lưu tên file vào session
             echo json_encode(['message' => 'File uploaded successfully']);
         } else {
             echo json_encode(['error' => 'Error uploading file']);
@@ -20,4 +22,3 @@ if (!empty($_FILES['file'])) {
     }
 }
 ?>
-
