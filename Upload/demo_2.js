@@ -9,17 +9,17 @@ let isFileUploaded = false
 fileSelector.onclick = () => fileSelectorInput.click()
 fileSelectorInput.onchange = () => {
     [...fileSelectorInput.files].forEach((file) => {
-        if (typeValidation(file.type) && checkFileSize(file.size)) {
+        if(typeValidation(file.type) && checkFileSize(file.size) && checkFileNum()){
             uploadFile(file)
         }
-    })
+    })  
 }
 
 // when file is over the drag area
 dropArea.ondragover = (e) => {
     e.preventDefault();
     [...e.dataTransfer.items].forEach((item) => {
-        if (typeValidation(item.type)) {
+        if(typeValidation(item.type)){
             dropArea.classList.add('drag-over-effect')
         }
     })
@@ -32,19 +32,19 @@ dropArea.ondragleave = () => {
 dropArea.ondrop = (e) => {
     e.preventDefault();
     dropArea.classList.remove('drag-over-effect')
-    if (e.dataTransfer.items) {
+    if(e.dataTransfer.items){
         [...e.dataTransfer.items].forEach((item) => {
-            if (item.kind === 'file') {
+            if(item.kind === 'file'){
                 const file = item.getAsFile();
-                if (typeValidation(file.type) && checkFileSize(file.size)) {
+                if (typeValidation(file.type) && checkFileSize(file.size) && checkFileNum()){
                     uploadFile(file)
                 }
 
             }
         })
-    } else {
+    }else{
         [...e.dataTransfer.files].forEach((file) => {
-            if (typeValidation(file.type) && checkFileSize(file.size)) {
+            if(typeValidation(file.type) && checkFileSize(file.size) && checkFileNum()){
                 uploadFile(file)
             }
         })
@@ -53,15 +53,15 @@ dropArea.ondrop = (e) => {
 
 
 // check the file type
-function typeValidation(type) {
+function typeValidation(type){
     var splitType = type.split('/')[0]
-    if (splitType == 'application' || splitType == 'image') {
+    if(splitType == 'application'|| splitType == 'image'){
         return true
     }
 }
-
 // upload file function
-function uploadFile(file) {
+function uploadFile(file){
+    isFileUploaded = true
     listSection.style.display = 'block'
     var li = document.createElement('li')
     li.classList.add('in-prog')
@@ -77,7 +77,7 @@ function uploadFile(file) {
             <div class="file-progress">
                 <span></span>
             </div>
-            <div class="file-size">${(file.size / (1024 * 1024)).toFixed(2)} MB</div>
+            <div class="file-size">${(file.size/(1024*1024)).toFixed(2)} MB</div>
         </div>
         <div class="col">
             <svg xmlns="http://www.w3.org/2000/svg" class="cross" height="20" width="20"><path d="m5.979 14.917-.854-.896 4-4.021-4-4.062.854-.896 4.042 4.062 4-4.062.854.896-4 4.062 4 4.021-.854.896-4-4.063Z"/></svg>
@@ -91,10 +91,9 @@ function uploadFile(file) {
     http.onload = () => {
         li.classList.add('complete')
         li.classList.remove('in-prog')
-        isFileUploaded = true
     }
     http.upload.onprogress = (e) => {
-        var percent_complete = (e.loaded / e.total) * 100
+        var percent_complete = (e.loaded / e.total)*100
         li.querySelectorAll('span')[0].innerHTML = Math.round(percent_complete) + '%'
         li.querySelectorAll('span')[1].style.width = percent_complete + '%'
     }
@@ -104,12 +103,12 @@ function uploadFile(file) {
     http.onabort = () => li.remove()
 }
 // find icon for file
-function iconSelector(type) {
-    if (type.split('/')[0] == 'application') {
-        if (type.split('/')[1] == 'pdf') {
+function iconSelector(type){
+    if (type.split('/')[0] == 'application'){
+        if (type.split('/')[1] == 'pdf'){
             return 'pdf.png'
         }
-        else if (type.split('/')[1] == 'msword' || type.split('/')[1] == 'vnd.openxmlformats-officedocument.wordprocessingml.document') {
+        else if (type.split('/')[1] == 'msword' || type.split('/')[1] == 'vnd.openxmlformats-officedocument.wordprocessingml.document'){
             return 'doc.png'
         }
         else {
@@ -122,21 +121,24 @@ function iconSelector(type) {
 }
 function checkFileSize(fileSize) {
     const maxSize = 500 * 1024 * 1024; // 500MB
-
     if (fileSize > maxSize) {
         alert('Kích thước file vượt quá 500MB. Vui lòng chọn một file nhỏ hơn.');
-        return false;
+        return false
     }
-
-    return true;
+    return true
 }
 function checkFileUploaded() {
     if (isFileUploaded) {
         window.location.href = "http://localhost/Upload/demo_4.html";
-
     }
     else {
-        alert('Chưa có file nào được upload. Vui lòng kéo thả hoặc chọn 1 file');
-
+        alert('Chưa có tệp tin nào được tải lên. Vui lòng chọn hoặc kéo thả một tệp tin vào.');
     }
+}
+function checkFileNum() {
+    if (isFileUploaded) {
+        alert('Số lượng tệp tin có thể tải lên tối đa là 1.');
+        return false
+    }
+    return true
 }
