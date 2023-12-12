@@ -410,13 +410,19 @@ input[type="number"] {
     /* Add some space between the settings and the print range/copies boxes */
 }
 
-.actions2 {
+.s2 {
     display: flex;
     justify-content: flex-end;
     /* Aligns items to the right */
     padding: 10px;
     /* Add padding as needed */
 
+    /* Adjust padding to match other elements */
+}
+
+.actions2 {
+    text-align: right;
+    padding: 0 15px 15px;
     /* Adjust padding to match other elements */
 }
 

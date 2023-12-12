@@ -267,7 +267,8 @@ select[name="apply-to"] {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Subtle shadow for depth */
-    max-width: 300px;
+    max-width: 500px;
+
     /* Adjust width as needed */
     margin: auto;
     /* Center the container */
@@ -276,10 +277,15 @@ select[name="apply-to"] {
 .notification-icon {
     color: #4CAF50;
     /* Green color for the check icon */
-    font-size: 70px;
+    font-size: 40px;
     /* Size of the icon */
     margin-bottom: 10px;
     /* Space between the icon and the message */
+    /* If using an SVG or image, center it */
+    display: block;
+    /* This will allow margin: auto to center the icon */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .notification-message h2 {
@@ -288,6 +294,9 @@ select[name="apply-to"] {
     /* Green color for the 'SUCCESS' text */
     font-size: 30px;
     /* Size of the heading */
+    /* Ensure that the heading is not inheriting any text-align properties */
+    text-align: center;
+    /* Explicitly center the heading */
 }
 
 .notification-message p {
@@ -296,9 +305,11 @@ select[name="apply-to"] {
     /* Medium grey for the paragraph */
     font-size: 16px;
     /* Size of the paragraph */
+    text-align: center;
+    /* Explicitly center the paragraph */
 }
 
-/* If you're using an SVG or image for the check icon */
+/* Adjustments for SVG or image icon */
 .notification-icon svg,
 .notification-icon img {
     height: 50px;
@@ -308,6 +319,7 @@ select[name="apply-to"] {
     margin: auto;
     /* Center the icon */
 }
+
 
 
 
