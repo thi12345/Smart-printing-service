@@ -1,146 +1,87 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: auto;
-    padding: auto;
+* {
+    margin: 0;
+}
+
+body,
+html {
     height: 100%;
     width: 100%;
     min-width: 1000px;
-    box-sizing: border-box;
 }
 
-.header {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
-    background-color: #FFF;
+img {
+    height: auto;
+    width: auto;
+    float: left;
 }
 
-.header img {
-    width: 130px;
-    height: 100px;
-}
-
-.school-name {
-    display: flex;
-    flex-direction: column;
-    /* Adds some space between the logo and the text */
-}
-
-.school-name h1:first-child {
-    color: #1488d8;
-    /* The color for "ĐẠI HỌC QUỐC GIA TP.HCM" */
-    font-family: 'Arial', sans-serif;
-    font-weight: lighter;
-    font-size: 1.2em;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.school-name h1:last-child {
-    color: #030391;
-    /* The color for "TRƯỜNG ĐẠI HỌC BÁCH KHOA" */
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.student-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin-left: auto;
-    /* Pushes the student info to the right */
-}
-
-.student-info p {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    color: #000;
-    /* Black color for the text */
-    margin: 0;
-    text-align: right;
-    /* Aligns text to the right */
-}
-
-
-.information {
-    display: flex;
-    flex-wrap: nowrap;
-    /* Prevents the boxes from wrapping */
-    justify-content: space-between;
-    /* Adds space between the boxes only if there is extra space */
-    align-items: stretch;
-    /* Makes the child divs fill the parent in height */
-    width: 100%;
-    margin: 0;
-
-}
-
-.pages-left,
-.additional-pages {
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-.pages-left {
-    background-color: #F4D0D0;
-    /* Your left box color */
-    flex: 0 0 auto;
-    /* Do not grow, do not shrink, is automatically sized */
-    width: 300px;
-    /* Fixed width for the left box */
-}
-
-.additional-pages {
-    background-color: #98ED8A;
-    /* Your right box color */
-    flex: 0 0 auto;
-    /* Do not grow, do not shrink, is automatically sized */
-    width: 300px;
-    /* Fixed width for the right box */
-    text-align: right;
-}
-
-.pages-left p,
-.additional-pages p {
-    margin: 0;
-    /* Remove default margins from paragraphs */
-}
-
-
-/*STEP 1*/
-
-/* Main navigation menu styling */
-.navigation {
-    background-color: #0044cc;
-    /* Main menu background color */
-    padding: 0;
-    margin: 0;
-}
-
-.navigation ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-}
-
-.navigation li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+h2 {
     display: block;
+    width: 40%;
+    float: left;
+}
+
+#info {
+    margin-top: 17.6px;
+    display: inline-block;
+    width: 40%;
+    text-align: end;
+}
+
+#pages {
+    width: 40%;
+    height: 5%;
+    float: left;
+    background-color: #F4D0D0;
+}
+
+#pages p {
+    width: fit-content;
+    margin: auto;
+}
+
+#time {
+    margin-left: 20%;
+    width: 40%;
+    height: 5%;
+    display: inline-block;
+    background-color: #98ED8A;
+}
+
+#time p {
+    text-rendering: auto;
+    width: fit-content;
+    margin: auto;
+}
+
+#taskbar {
+    height: 6%;
+}
+
+button {
+    background-color: #0096FF;
+    color: #FFFFFF;
+    height: 100%;
+    width: 20%;
+    border-spacing: 0;
+}
+
+button:active {
+    background-color: #0000FF;
+}
+
+#home {
+    background-color: #0000FF;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 /* Submenu styling for PRINT */
 .print-submenu {
-    background-color: #000080;
+    background-color: #BFBFBF;
     /* Submenu background color */
     padding: 0;
     margin: 0;
@@ -171,6 +112,19 @@ body {
     text-decoration: none;
     padding: 10px 0;
     display: block;
+}
+
+.print {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    background-color: #0000FF;
+}
+
+.active {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
 }
 
 .print-submenu a.active {
@@ -270,13 +224,6 @@ input[type="number"]::-webkit-outer-spin-button {
     max-height: 100%;
     object-fit: contain;
 }
-
-@media (max-width: 768px) {
-    .preview-content {
-        /* Điều chỉnh cho màn hình nhỏ hơn */
-    }
-}
-
 
 
 
@@ -436,21 +383,6 @@ input[type="number"] {
     width: auto;
 }
 
-button {
-    padding: 10px 15px;
-    margin: 10px 5px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
 
 @media (max-width: 768px) {
     .flex-container {

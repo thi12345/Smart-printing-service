@@ -10,37 +10,22 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo"><img src="picture/Logo-DH-Bach-Khoa-HCMUT 1.png" alt=""></div>
-        <div class="school-name">
-            <p>ĐẠI HỌC QUỐC GIA TP.HCM </p>
-            <p>TRƯỜNG ĐẠI HỌC BÁCH KHOA</p>
-        </div>
-        <div class="student-info">
-            <p>Họ và tên: Nguyễn Văn A - xxxxxx</p>
-            <p>Khoa học và Kỹ thuật Máy tính</p>
-        </div>
+    <img src="picture/Logo-DH-Bach-Khoa-HCMUT 1.png" alt="Logo">
+    <h2>ĐẠI HỌC QUỐC GIA TP.HCM<br>TRƯỜNG ĐẠI HỌC BÁCH KHOA</h2>
+    <p id="info">Họ và tên: <strong>Nguyễn Văn A</strong> - 2xxxxxx<br>Khoa khoa học và kỹ thuật máy tính</p>
+    <hr>
+    <div id="pages">
+        <p>Số trang còn lại của bạn là:<span id="page"></span></p>
     </div>
-
-    <div class="information">
-        <div class="pages-left" style="background-color: #F4D0D0; text-align: center; ">
-            <p>Số trang còn lại của bạn là yy</p>
-        </div>
-        <div class="additional-pages" style="background-color: #98ED8A; text-align: center; ">
-            <p>Bạn sẽ nhận thêm 30 trang miễn phí sau 29 ngày 15 giờ 20 phút 15 giây</p>
-        </div>
+    <div id="time">
+        <p>Bạn sẽ nhận được 30 trang miễn phí sau:<span id="remaining"></span></p>
     </div>
-
-    <!-- Main navigation menu -->
-    <nav class="navigation">
-        <ul>
-            <li><a href="#">TRANG CHỦ</a></li>
-            <li><a href="#">MUA TRANG IN</a></li>
-            <li><a href="#">THÔNG TIN SINH VIÊN</a></li>
-            <li><a href="#">TRỢ GIÚP VÀ PHẢN HỒI</a></li>
-            <li><a href="http://localhost/Upload/demo_1.html" class="print">PRINT</a></li>
-        </ul>
-    </nav>
+    <hr>
+    <div id="taskbar">
+        <button id="home">Trang chủ</button><button id="buy"><a href="index.php">Mua trang in</a></button><button
+            id="inf">Thông tin sinh viên</button><button id="help"><a href="help.php">Trợ giúp và phản
+                hồi</a></button><button id="print">Print</button>
+    </div>
 
     <!-- Submenu for PRINT, shown in a new row -->
     <div class="print-submenu">
