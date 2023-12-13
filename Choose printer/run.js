@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var cancelButton = document.querySelector('.actions button:nth-child(2)'); // Selecting the second button in the 'actions' div
     //
     cancelButton.addEventListener('click', function () {
-        window.location.href = '../Printproperties/proprint.html'; // Redirect to 'proprint.html'
+        window.location.href = "../Printproperties/proprint.php"; // Redirect to 'proprint.html'
     });
 
     toggleSteps(true); // Initialize with step1 shown

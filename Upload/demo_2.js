@@ -97,7 +97,7 @@ function uploadFile(file){
         li.querySelectorAll('span')[0].innerHTML = Math.round(percent_complete) + '%'
         li.querySelectorAll('span')[1].style.width = percent_complete + '%'
     }
-    http.open('POST', 'http://localhost/Upload/sender.php', true)
+    http.open('POST', 'sender.php', true)
     http.send(data)
     li.querySelector('.cross').onclick = () => http.abort()
     http.onabort = () => li.remove()
@@ -129,7 +129,7 @@ function checkFileSize(fileSize) {
 }
 function checkFileUploaded() {
     if (isFileUploaded) {
-        window.location.href = "http://localhost/Upload/demo_4.html";
+        window.location.href = "demo_4.php";
     }
     else {
         alert('Chưa có tệp tin nào được tải lên. Vui lòng chọn hoặc kéo thả một tệp tin vào.');
