@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var cancelButton = document.querySelector('.actions button:nth-child(2)'); // Selecting the second button in the 'actions' div
     //
     cancelButton.addEventListener('click', function () {
-        window.location.href = '../Upload/demo_2.html'; // Redirect to 'proprint.html'
+        window.location.href = '../Upload/demo_2.php'; // Redirect to 'proprint.html'
     });
 
     // printrange to>= from
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // JavaScript to handle button click
     document.getElementById('OK').addEventListener('click', function () {
-        window.location.href = '../Choose%20printer/choose.html';
+        window.location.href = "../Choose printer/choose.php";
     });
 
 

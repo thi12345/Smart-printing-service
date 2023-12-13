@@ -272,6 +272,9 @@ select[name="apply-to"] {
     /* Adjust width as needed */
     margin: auto;
     /* Center the container */
+ 
+    align-items: center;
+
 }
 
 .notification-icon {
@@ -286,6 +289,7 @@ select[name="apply-to"] {
     /* This will allow margin: auto to center the icon */
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
 }
 
 .notification-message h2 {
@@ -295,7 +299,9 @@ select[name="apply-to"] {
     font-size: 30px;
     /* Size of the heading */
     /* Ensure that the heading is not inheriting any text-align properties */
+
     text-align: center;
+ 
     /* Explicitly center the heading */
 }
 
@@ -306,6 +312,7 @@ select[name="apply-to"] {
     font-size: 16px;
     /* Size of the paragraph */
     text-align: center;
+
     /* Explicitly center the paragraph */
 }
 

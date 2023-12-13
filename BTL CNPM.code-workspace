@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../TEST"
+		},
+		{
+			"path": "E:/HocBachKhoa/ltw/BTL/tu-quy-plant"
+		},
+		{
+			"path": "../bonsaiStore_server"
+		},
+		{
+			"path": "E:/Learning HTML & CSS/Test"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BTL CNPM"
+	}
+}
