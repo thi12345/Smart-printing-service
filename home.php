@@ -194,9 +194,9 @@
         <option value="whole-document">Whole Document</option>
         <!-- Add other options if needed -->
       </select>
-      <button type="button">Next</button>
-      <button type="button">Cancel</button>
-      <button type="button">Help</button>
+      <button type="button"><a href="'Choose printer'/choose.php"></a>Chọn máy in</button>
+      <button type="button"><a href="Upload/demo_1.php"></a>In ngay</button>
+      <button type="button"><a href="help.php">Help</a></button>
     </div>
   </body>
 </html>
