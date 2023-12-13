@@ -71,13 +71,8 @@
             <p>Bạn sẽ nhận được 30 trang miễn phí sau:<span id="countdown"></span></p>
         </div>
         <hr>
-    <div id="pages">
-        <p>Số trang còn lại của bạn là:<span id="page"></span></p>
-    </div>
-    <div id="time">
-        <p>Bạn sẽ nhận được 30 trang miễn phí sau:<span id="remaining"></span></p>
-    </div>
-    <hr>
+
+
     <div id="taskbar">
         <button id="home"><a href="../home.php">Trang chủ</a></button><button id="buy"><a href="../buy.php">Mua trang in</a></button><button
             id="inf"><a href="#">Thông tin sinh viên</a></button><button id="help"><a href="../help.php">Trợ giúp và phản
